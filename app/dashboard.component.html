@@ -1,0 +1,14 @@
+<h2>Dashboard</h2>
+
+<button (click)="getData()">Get some data</button>
+
+<div *ngIf="properData">
+    <h3>{{properData.title}}</h3>
+    <div>{{properData.body}}</div>
+</div>
+
+<ul>
+    <li *ngFor="let stuff of data" (click)="moreInfo(stuff.id)">
+        <div>{{stuff.title}}</div>
+    </li>
+</ul>
